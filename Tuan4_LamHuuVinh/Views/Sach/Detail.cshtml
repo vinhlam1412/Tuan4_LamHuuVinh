@@ -1,0 +1,71 @@
+﻿@model Tuan4_LamHuuVinh.Models.Sach
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CHI TIẾT SÁCH</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Mã loại</dt>
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>Tên sách</dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>Hình ảnh</dt>
+
+        <dd>
+            <img width="250px" src="@Html.DisplayFor(model => model.hinh)" alt="Alternate Text" />
+        </dd>
+
+        <dt>Giá bán</dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>Ngày cập nhật</dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>Số lượng tồn</dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+
+    </dl>
+</div>
+@*<div class="row">
+    <div class="col-md-4">
+        <div class="caption">
+            <p>Mã loại: @Html.DisplayFor(model => model.maloai)</p>
+            <p>Tên sách: @Html.DisplayFor(model => model.tensach)</p>
+            <div class="thumbnail">
+                <img src="@Html.DisplayFor(model => model.hinh)" alt="Alternate Text" />
+            </div>
+            <p>Giá bán: @Html.DisplayFor(model => model.giaban)</p>
+            <p>Ngày cập nhật: @Html.DisplayFor(model => model.ngaycapnhat)</p>
+            <p>Số lượng tồn: @Html.DisplayFor(model => model.soluongton)</p>
+            <p>
+                @Html.ActionLink("<", "ListSach", "", new { @class = "btn btn-info" })
+                <a href="#" class="btn btn-primary" role="button">Mua</a>
+            </p>
+        </div>
+    </div>
+</div>*@
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.masach }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
